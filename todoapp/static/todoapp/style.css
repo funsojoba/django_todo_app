@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  padding: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.forms {
+  background: #fff;
+  -webkit-box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.12);
+          box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.12);
+  border-radius: 30px;
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+}
+
+.forms form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.forms form input {
+  padding: 20px;
+  margin: 2px;
+}
+
+.forms form input[type=text] {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  border: 1px solid #005f8b;
+  border-radius: 20px;
+  outline: none;
+}
+
+.forms form input[type=submit] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  border-radius: 20px;
+  background: #005f8b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.work {
+  width: 70%;
+  margin: auto;
+  background: #fff;
+  -webkit-box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.12);
+          box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.12);
+  border-radius: 30px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.work .todo {
+  padding: 10px;
+  margin: 5px;
+  background: #c1eeff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .work, .forms {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
