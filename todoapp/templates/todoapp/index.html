@@ -11,7 +11,8 @@
 </head>
 <body>
     
-<h1>Hello there, welcome to the todo app</h1>
+{% include 'todoapp/header.html'%}
+
 <div class="forms">
     <form action="/" method="post">
         {% csrf_token %}
@@ -22,18 +23,24 @@
 </div>
 <div class="work">
 {% for row in tasks %}
+    {% if row.completed == True%}
     <div class="todo">
+        <div class="icons">
             <a href="{% url 'update_task' row.id %}"><i class="far fa-edit"></i> Update</a>
             <a href="{% url 'delete' row.id %}"><i class="fas fa-trash"></i>  Delete</a>
-        {% if row.completed == True %}
-        <span style="text-decoration:line-through;">{{row}}</span>
-        {% else %}
-        <span>{{row}}</span>
-
+        </div>
+            <p style="text-decoration:line-through;">{{row}}</p>
     </div>
-    
+    {% else%}
+    <div class="todo">
+        <div class="icons">
+            <a href="{% url 'update_task' row.id %}"><i class="far fa-edit"></i> Update</a>
+            <a href="{% url 'delete' row.id %}"><i class="fas fa-trash"></i>  Delete</a>
+        </div>
+        <p>{{row}}</p>
+    </div>
     {% endif %}
-    {% endfor%}
+{% endfor%}
 </div>
 
 
